@@ -1,0 +1,110 @@
+/* Estilos padrão que se aplicam a todas as telas */
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: blanchedalmond; 
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: blue; 
+    font-family: 'Kanit', sans-serif;
+}
+
+img {
+    border-radius: 50%; /* Deixa a imagem redonda */
+    float: left; /* Faz a imagem flutuar na esquerda */
+    margin: 0 20px 10px 0; /* Adiciona margens ao redor da imagem */
+}
+
+img {
+    border-radius: 50%;
+    float: left;
+    margin: 0 20px 10px 0;
+    width: 300px; 
+    border: 10px solid rgb(112, 187, 216);
+}
+
+img:nth-of-type(2) {
+    border-radius: 0; /* Remove borda arredondada da segunda imagem */
+    width: 600px; 
+    height: 400px; 
+}
+
+p {
+    margin: 0 0 20px 0; /* margem abaixo do parágrafo */
+}
+
+h3 {
+    clear: both; /* Limpa a flutuação e coloca o elemento abaixo das imagens */
+    color: rgb(112, 187, 216);
+    font-family: 'Kanit', sans-serif;
+}
+
+li {
+    margin-bottom: 30px; /* Adiciona margem abaixo de cada item da lista */
+}
+
+.navigation {
+    list-style-type: none; /* Remove marcadores de lista */
+    margin: 0; /* Remove margem padrão da lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    background-color: rgb(112, 187, 216); 
+    overflow: hidden; 
+    text-align: center; /* Centraliza os links */
+}
+
+.navigation li {
+    display: inline; /* Faz com que os itens da lista fiquem lado a lado */
+}
+
+.navigation li a {
+    display: inline-block; /* Faz com que os links fiquem lado a lado */
+    color: black; 
+    text-align: center; 
+    padding: 14px 16px; /* Adiciona espaço ao redor do texto dentro dos links */
+    text-decoration: none; /* Remove a sublinhado padrão dos links */
+}
+
+.navigation {
+    position: relative; /* Adiciona posicionamento relativo para permitir o posicionamento absoluto da palavra */
+}
+
+.navigation::before {
+    content: "Trabalho PW- By Sophia "; 
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px; 
+    color: #000; 
+    position: absolute; /* posicionamento absoluto */
+    left: 10px; /* Define a distância da borda esquerda */
+    top: 50%; /* Define a distância do topo */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+}
+
+/* Media queries para diferentes tamanhos de tela */
+@media screen and (max-width: 600px) {
+    img {
+        width: 100%; /* Ajusta a largura da imagem para preencher a largura da tela */
+        float: none; /* Remove a flutuação para que as imagens fiquem empilhadas */
+        margin: 0 auto 10px auto; /* Centraliza a imagem e adiciona margem na parte inferior */
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
+    img:nth-of-type(2) {
+        width: 100%; /* Ajusta a largura da segunda imagem para preencher a largura da tela */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    /* Estilos adicionais para tablets */
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    /* Estilos adicionais para laptops */
+}
+
+@media screen and (min-width: 1201px) {
+    /* Estilos adicionais para telas maiores, como desktops */
+}
